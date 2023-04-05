@@ -33,9 +33,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             select m.ativo
             from Medico m 
             where 
-            m.id = :idMedico
+            m.id = :id
             """)
-    Boolean findAtivoById(Long idMedico);
-
-    Boolean existsByMedicoIdAndData(Long idMedico, LocalDateTime data);
+    Boolean findAtivoById(Long id);
 }
